@@ -2,9 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* background-color: rgba(#82d6ba96, green, blue, alpha); */
+    /* background: rgba(93, 182, 177, 0.24); */
+    /* background: rgba(0,0,0,0.2); */
 }
 
 body{
+    /* background: rgba(0,0,0,0.2); */
     color: #545454;
     display: flex;
     font-family: sans-serif;
@@ -83,6 +87,28 @@ body{
 .won::before {
     color: #BD022F;
     /* background-color: rgba(228, 77, 77, 0.514); */
+}
+
+#overlay{
+    border: 1px solid black;
+    position: fixed; /* Sit on top of the page content */
+    display: flex;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    /* cursor: pointer; Add a pointer on hover */
+}
+
+#overlay h1{
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 1024px)  {
