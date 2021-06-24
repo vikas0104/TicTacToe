@@ -100,7 +100,7 @@ body{
     right: 0;
     bottom: 0;
     color: white;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
