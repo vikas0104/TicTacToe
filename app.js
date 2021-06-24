@@ -84,7 +84,7 @@ const checkGameStatus =() =>{
         statusDiv.innerHTML = "It's a Tie"
     }
     else{
-        xIsNext = !xIsNext;
+        
         if (xIsNext){
             statusDiv.innerHTML = symbol['x'] + " is next!"
         }
@@ -120,12 +120,15 @@ const handleCellClick = (e) =>{
     // console.log(e.target.classList);
     const clasList = e.target.classList;
     // console.log(clasList.length);
-    const location = clasList[1];
+    // const location = clasList[1];
+    console.log(xIsNext,clasList.length)
     if (xIsNext && clasList.length == 2 && gameIsLive){
         clasList.add('x');
+        xIsNext = !xIsNext;
     }
     else if (!xIsNext && clasList.length == 2 && gameIsLive){
         clasList.add('o');
+        xIsNext = !xIsNext;
     }
     checkGameStatus();
 };
